@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Empleado>
+<Empleados>
     <empleado>
         <id>1</id>
         <nombre>Sergio</nombre>
     </empleado>
-</Empleado>
+    <jefe>
+        <id>1000</id>
+    </jefe>
+</Empleados>

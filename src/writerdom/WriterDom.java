@@ -33,6 +33,7 @@ public class WriterDom {
             
             Document document = createRootFile(implementation);
             createEmployeeElement(document);
+            createBossElement(document);
             
             /**
              * Creación de la fuente XML a partir del documento
@@ -66,7 +67,7 @@ public class WriterDom {
         /**
          * Asignamos "Empleado" como nodo raíz
          */
-        Document document = implementation.createDocument(null, "Empleado", null);
+        Document document = implementation.createDocument(null, "Empleados", null);
         /**
          * Asignamos la versión de nuestro fichero XML
          */
@@ -98,5 +99,23 @@ public class WriterDom {
         elementoEmpleado.appendChild(elementNombre);//asocio nodo nombre a empleado
                
     }   
+    
+    private static void createBossElement(Document document){
+        
+       Element elementJefe = document.createElement("jefe");
+       document.getDocumentElement().appendChild(elementJefe);
+       
+       Element elementIdJefe = document.createElement("id");//creo nodo ir
+              
+       Text textId = document.createTextNode("1000");//creo valor del texto id
+       elementIdJefe.appendChild(textId);
+       
+       elementJefe.appendChild(elementIdJefe);
+       
+              
+       
+       
+               
+    }
     
 }
