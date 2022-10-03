@@ -81,16 +81,22 @@ public class WriterDom {
      */
     private static void createEmployeeElement(Document document)
     {
-        Element elementoEmpleado = document.createElement("empleado");
-        document.getDocumentElement().appendChild(elementoEmpleado);
+        Element elementoEmpleado = document.createElement("empleado");//creo nodo empleado
+        document.getDocumentElement().appendChild(elementoEmpleado);//obtengo nodo raiz y asocio nodo empleado
         
-        Element elementId = document.createElement("id");
-        Text textId = document.createTextNode("1");
+        Element elementId = document.createElement("id");//creo nodo ir
+        Text textId = document.createTextNode("1");//creo texto 
+        elementId.appendChild(textId);//asocio texto a nodo id
         
-        elementId.appendChild(textId);
+        elementoEmpleado.appendChild(elementId);//asocio nodo id a nodo empleado
         
-        elementoEmpleado.appendChild(elementId);
+        Element elementNombre = document.createElement("nombre");//creo nodo nombre
+        Text textNombre = document.createTextNode("Sergio");//creo texto del nodo nombre
+       
+        elementNombre.appendChild(textNombre);//asocio textoNombre a nodo nombre
         
+        elementoEmpleado.appendChild(elementNombre);//asocio nodo nombre a empleado
+               
     }   
     
 }

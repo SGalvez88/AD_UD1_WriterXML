@@ -1,5 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><Empleado>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Empleado>
     <empleado>
         <id>1</id>
+        <nombre>Sergio</nombre>
     </empleado>
 </Empleado>
